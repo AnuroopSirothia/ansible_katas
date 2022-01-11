@@ -1,0 +1,12 @@
+# PLay example
+
+---
+
+- hosts: webservers:loadbalancers
+  tasks:
+          - name: Check uptime
+            register: uptimeoutput
+            command: uptime
+
+          - debug:
+              var: uptimeoutput.stdout_lines

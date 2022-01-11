@@ -1,0 +1,8 @@
+# Uupdate yum
+
+---
+
+- hosts: webservers
+  tasks:
+  - name: Updates to latest
+    apt: name=* state=latest

@@ -1,0 +1,6 @@
+# ping.yml
+---
+  - hosts: all:!control
+    tasks:
+      - name: Ping all VMs
+        action: ping

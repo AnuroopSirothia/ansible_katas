@@ -1,0 +1,16 @@
+# Stop all Azure VMs
+
+- name: Stop Azure VM
+  become: true
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  hosts: loadbalancers:webservers
+  tasks:
+    - name: Stop virtual machine
+      azure_rm_virtualmachine:
+        resource_group: ansible
+        name:
+          - app1
+          - app2
+          - lb1
+        allocated: no
