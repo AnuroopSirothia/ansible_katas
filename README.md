@@ -1,2 +1,2 @@
-# ansible_katas
+# Ansible Katas
 Playground for Ansible practice.
